@@ -1,0 +1,23 @@
+Cross Site Scripting
+
+● XSS merupakan celah keamanan yang biasanya dieksploitasi oleh penyerang dengan cara mengirim
+script pada parameter
+● Jika sampai pembuat kode salah melakukan render halaman web, maka script tersebut akan di
+render di halaman web, dan bisa menyebabkan penyerang mengirimkan kode JavaScript
+● Hal ini sangat berbahaya, karena penyerang bisa mencuri session pengguna yang sedang login di
+web kita
+
+contoh : name=Eko<h1><script>alert("Ups di Heck")</script><h1>
+
+Cara Mencegah XSS
+
+● Cara mencegah XSS adalah, kita perlu berhati-hati ketika ingin menampilkan text yang inputnya
+berasal dari user
+● Jika kita tidak berharang sebuah text berisi tag HTML, kita menggunakan function
+htmlspecialchars(value)
+● Function htmlspecialchars(value) secara otomatis akan akan melakukan encode spesial character
+di html agar di render menjadi text biasa
+● https://www.php.net/manual/en/function.htmlspecialchars.php
+
+
+demo ada difile get.php
